@@ -1,0 +1,21 @@
+PS /home/l207872> git clone -b main https://tgunjisx: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@github.com/SxSkillupTask/HM-SimpleDemo-1.git
+Cloning into 'HM-SimpleDemo-1'...
+remote: Enumerating objects: 56, done.
+remote: Counting objects: 100% (56/56), done.
+remote: Compressing objects: 100% (27/27), done.
+remote: Total 56 (delta 27), reused 48 (delta 21), pack-reused 0
+Receiving objects: 100% (56/56), 15.89 KiB | 214.00 KiB/s, done.
+Resolving deltas: 100% (27/27), done.
+PS /home/l207872> az acr build --registry crgptdevjpe01 --resource-group jpe-SXGPT-rg01 --image dockerimage .                             
+Unable to find './Dockerfile'.
+PS /home/l207872> ls                   
+clouddrive  HM-SimpleDemo-1  Microsoft
+PS /home/l207872> cd ./HM-SimpleDemo-1/
+PS /home/l207872/HM-SimpleDemo-1> az acr build --registry crgptdevjpe01 --resource-group jpe-SXGPT-rg01 --image dockerimage .                                                                        
+Packing source code into tar to upload...
+Excluding '.git' based on default ignore rules
+Excluding '.gitignore' based on default ignore rules
+Uploading archived source code from '/tmp/build_archive_cd5acb07157a409ead6704f8a9dc9377.tar.gz'...
+(AuthorizationFailed) The client 'L207872@hokennomadoguchi.co.jp' with object id '403a5d91-237c-4981-93d2-26ef2f843ab6' does not have authorization to perform action 'Microsoft.ContainerRegistry/registries/listBuildSourceUploadUrl/action' over scope '/subscriptions/3c088ff8-e37d-4e7f-abdf-5839148c47a8/resourceGroups/jpe-SXGPT-rg01/providers/Microsoft.ContainerRegistry/registries/crgptdevjpe01' or the scope is invalid. If access was recently granted, please refresh your credentials.
+Code: AuthorizationFailed
+Message: The client 'L207872@hokennomadoguchi.co.jp' with object id '403a5d91-237c-4981-93d2-26ef2f843ab6' does not have authorization to perform action 'Microsoft.ContainerRegistry/registries/listBuildSourceUploadUrl/action' over scope '/subscriptions/3c088ff8-e37d-4e7f-abdf-5839148c47a8/resourceGroups/jpe-SXGPT-rg01/providers/Microsoft.ContainerRegistry/registries/crgptdevjpe01' or the scope is invalid. If access was recently granted, please refresh your credentials.
